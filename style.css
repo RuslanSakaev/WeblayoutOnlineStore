@@ -137,13 +137,14 @@ header {
     position: relative;
     overflow: hidden;
     width: 360px;
-    height: 260px;
+    min-height: 260px;
+    transition: transform 0.3s;
 }
 
 .product-large {
     grid-column: span 3;
     width: 1140px;
-    height: 180px;
+    min-height: 180px;
 }
 
 .product-image {
@@ -160,8 +161,6 @@ header {
     height: auto;
     display: block;
     transition: transform 0.3s;
-    margin: 0;
-    padding: 0;
 }
 
 .product-overlay {
@@ -189,7 +188,7 @@ header {
 .product-overlay p {
     margin: 0;
     padding: 10px;
-    z-index: 1;
+    z-index: 3;
     /* Поверх затемнения */
     position: absolute;
     top: 50%;
@@ -200,9 +199,6 @@ header {
 .sale__text {
     font-size: 16px;
     font-weight: 400;
-}
-
-.sale__text {
     color: #F16D7F;
     font-size: 24px;
     font-weight: 700;
@@ -214,9 +210,8 @@ header {
 
 .product-card:hover .product-overlay,
 .product-large:hover .product-overlay {
-    opacity: 1;
+    opacity: 0.8;
 }
-
 
 /* Стили для секции Featured Items */
 .featured-items {
@@ -255,38 +250,47 @@ header {
     gap: 30px;
 }
 
-/* Стили для второй карточки с фоном */
-.product-card:nth-child(2) {
-    background-color: #F7E4E2;
-}
-
 /* Стили для карточек товаров */
-.product-card {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.product-sale {
     position: relative;
-    background-color: transparent;
-    border: none;
-    background: none;
-
+    overflow: hidden;
+    width: 360px;
+    height: 581px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap
 }
 
-/* Стили для фона блока с текстом у карточек */
-.product-card div:last-child {
+.image-container {
+    position: relative;
+    height: 420px;
+}
+
+/* Обновленные стили для блока с текстом внутри карточек product-sale */
+.product-text {
     background-color: #F8F8F8;
-    padding-left: 18px;
-    padding-bottom: 57px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    height: 180px;
+    width: 100%;
+}
+
+.product-sale .product-text .product-title a {
+    color: #222;
 }
 
 .product-title {
+    text-decoration: none;
     font-family: Lato;
+    color: #000;
+    ;
     font-size: 13px;
     font-weight: 400;
     text-align: left;
     margin-top: 24px;
     margin-bottom: 18px;
+    margin-left: 18px;
     background: none;
 }
 
@@ -295,6 +299,7 @@ header {
     color: #5D5D5D;
     font-size: 14px;
     font-weight: 300;
+    margin-left: 18px;
 }
 
 .product-price {
@@ -304,12 +309,14 @@ header {
     color: #F16D7F;
     position: absolute;
     margin-top: 18px;
+    margin-left: 18px;
 }
 
 /* Стили для кнопки "Browse All Product" */
 .browse-button {
     text-align: center;
     margin-top: 48px;
+    background-color: none;
 }
 
 .button-link {
