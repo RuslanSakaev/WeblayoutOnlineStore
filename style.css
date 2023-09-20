@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+summary {
+    display: block;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+header {
+    background-color: #222;
+    height: 75px;
+}
+
+/* Стили для остальных элементов */
+.header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.header-logo-search img {
+    margin-right: 41px;
+    margin-top: 18px;
+    margin-bottom: 20px;
+}
+
+.header-icons {
+    width: 160px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 26px;
+    margin-bottom: 20px;
+}
+
+/* Стили для баннера */
+.banner {
+    background-color: #F1E4E6;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.banner-image {
+    grid-column: 1;
+    justify-self: end;
+}
+
+.banner-brand {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 290px;
+    margin-left: 64px;
+    width: 418px;
+    height: 93px;
+    border-left: 12px solid #F16D7F;
+    padding-left: 16px;
+    box-sizing: border-box;
+}
+
+.banner-brand p {
+    color: white;
+    margin-left: auto;
+}
+
+.banner-brand p {
+    font-family: Lato;
+    font-style: normal;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.banner-brand .brand-text {
+    color: #222;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.banner-brand .luxurious-text {
+    color: #222;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.banner-brand .fashion-text {
+    color: #F16D7F;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.banner-image img {
+    display: block;
+}
+
+/* Стили для выпадающего меню */
+.menu {
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    background-color: #F16D7F;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Показываем меню при наведении на кнопку меню */
+#menu-button:hover+.menu {
+    display: block;
+}
+
+/* Скрыть меню при уходе курсора с меню */
+.menu:hover {
+    display: block;
+}
+
+.product-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1140px;
+    margin: 65px auto 0;
+}
+
+.product-card,
+.product-large {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    color: #fff;
+    transition: opacity 0.3s;
+}
+
+.product-overlay p {
+    margin: 0;
+    padding: 10px;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.1);
+}
+
+.product-card:hover .product-overlay,
+.product-large:hover .product-overlay {
+    opacity: 1;
+}
