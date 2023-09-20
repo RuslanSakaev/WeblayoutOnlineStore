@@ -80,9 +80,6 @@ header {
 .banner-brand p {
     color: white;
     margin-left: auto;
-}
-
-.banner-brand p {
     font-family: Lato;
     font-style: normal;
     line-height: normal;
@@ -136,20 +133,33 @@ header {
 .product-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-gap: 30px;
     max-width: 1140px;
     margin: 65px auto 0;
 }
 
-.product-card,
-.product-large {
+.product-card {
     position: relative;
     overflow: hidden;
+    width: 360px;
+    height: 260px;
+}
+
+.product-large {
+    grid-column: span 3;
+    width: 1140px;
+    height: 180px;
 }
 
 .product-image {
     position: relative;
     overflow: hidden;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .product-image img {
@@ -166,18 +176,36 @@ header {
     right: 0;
     bottom: 0;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(33, 22, 22, 0.70);
+    /* Затемнение */
     opacity: 0;
     color: #fff;
     transition: opacity 0.3s;
 }
 
+.product-overlay img {
+    max-width: 100%;
+    height: auto;
+}
+
 .product-overlay p {
+
     margin: 0;
     padding: 10px;
+    z-index: 1;
+    /* Поверх затемнения */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-style: normal;
+    line-height: normal;
+    white-space: nowrap;
 }
 
 .product-card:hover .product-image img {
