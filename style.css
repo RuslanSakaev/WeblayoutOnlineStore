@@ -10,6 +10,7 @@ body {
 
 img {
     max-width: 100%;
+    display: block;
 }
 
 a {
@@ -74,13 +75,11 @@ header {
     height: 93px;
     border-left: 12px solid #F16D7F;
     padding-left: 16px;
-    box-sizing: border-box;
+    display: flex;
+    align-items: center;
 }
 
 .banner-brand p {
-    color: white;
-    margin-left: auto;
-    font-family: Lato;
     font-style: normal;
     line-height: normal;
     white-space: nowrap;
@@ -102,10 +101,6 @@ header {
     color: #F16D7F;
     font-size: 32px;
     font-weight: 700;
-}
-
-.banner-image img {
-    display: block;
 }
 
 /* Стили для выпадающего меню */
@@ -158,8 +153,6 @@ header {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     font-style: normal;
-    font-weight: 400;
-    line-height: normal;
 }
 
 .product-image img {
@@ -167,6 +160,8 @@ header {
     height: auto;
     display: block;
     transition: transform 0.3s;
+    margin: 0;
+    padding: 0;
 }
 
 .product-overlay {
@@ -192,7 +187,6 @@ header {
 }
 
 .product-overlay p {
-
     margin: 0;
     padding: 10px;
     z-index: 1;
@@ -201,11 +195,17 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: 'Lato', sans-serif;
-    text-align: center;
-    font-style: normal;
-    line-height: normal;
-    white-space: nowrap;
+}
+
+.sale__text {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.sale__text {
+    color: #F16D7F;
+    font-size: 24px;
+    font-weight: 700;
 }
 
 .product-card:hover .product-image img {
@@ -215,4 +215,122 @@ header {
 .product-card:hover .product-overlay,
 .product-large:hover .product-overlay {
     opacity: 1;
+}
+
+
+/* Стили для секции Featured Items */
+.featured-items {
+    width: 1140px;
+    margin: 96px auto;
+}
+
+/* Стили для заголовка */
+.featured-title {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    justify-content: space-around
+}
+
+/* Стили для подзаголовка */
+.featured-subtitle {
+    color: #9F9F9F;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 6px;
+    margin-bottom: 48px;
+    display: flex;
+    justify-content: space-around
+}
+
+/* Стили для контейнера карточек */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Стили для второй карточки с фоном */
+.product-card:nth-child(2) {
+    background-color: #F7E4E2;
+}
+
+/* Стили для карточек товаров */
+.product-card {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    background: none;
+
+}
+
+/* Стили для фона блока с текстом у карточек */
+.product-card div:last-child {
+    background-color: #F8F8F8;
+    padding-left: 18px;
+    padding-bottom: 57px;
+}
+
+.product-title {
+    font-family: Lato;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 24px;
+    margin-bottom: 18px;
+    background: none;
+}
+
+.product-description {
+    font-family: Lato;
+    color: #5D5D5D;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.product-price {
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 400;
+    color: #F16D7F;
+    position: absolute;
+    margin-top: 18px;
+}
+
+/* Стили для кнопки "Browse All Product" */
+.browse-button {
+    text-align: center;
+    margin-top: 48px;
+}
+
+.button-link {
+    display: inline-block;
+    width: 212px;
+    height: 48px;
+    background-color: #FFF;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #F26376;
+    text-align: center;
+    text-decoration: none;
+    line-height: 48px;
+    border: 1px solid #F16D7F;
+    transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+    background-color: #FF5068;
+    /* Цвет при наведении */
 }
