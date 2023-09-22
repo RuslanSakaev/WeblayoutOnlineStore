@@ -258,6 +258,7 @@ header {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    align-content: space-between;
 }
 
 .image-container {
@@ -400,13 +401,10 @@ header {
     .card-container {
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        gap: 16px;
+        justify-content: center;
     }
 
-    /* Стили для карточек товаров */
-    .product-sale {
-        flex: 0 0 calc(50% - 15px);
 
-    }
 
 }
