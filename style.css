@@ -5,7 +5,7 @@
 
 body {
     font-family: 'Lato', sans-serif;
-    max-width: 100%;
+    width: 100%;
 }
 
 img {
@@ -30,7 +30,6 @@ header {
     height: 75px;
 }
 
-/* Стили для остальных элементов */
 .header {
     display: flex;
     justify-content: space-between;
@@ -71,8 +70,8 @@ header {
     justify-self: start;
     margin-top: 290px;
     margin-left: 64px;
-    width: 418px;
-    height: 93px;
+    max-width: 418px;
+    max-height: 93px;
     border-left: 12px solid #F16D7F;
     padding-left: 16px;
     display: flex;
@@ -137,14 +136,14 @@ header {
     position: relative;
     overflow: hidden;
     width: 360px;
-    min-height: 260px;
+    max-height: 260px;
     transition: transform 0.3s;
 }
 
 .product-large {
     grid-column: span 3;
     width: 1140px;
-    min-height: 180px;
+    height: 180px;
 }
 
 .product-image {
@@ -258,7 +257,7 @@ header {
     height: 581px;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
 .image-container {
@@ -266,7 +265,7 @@ header {
     height: 420px;
 }
 
-/* Обновленные стили для блока с текстом внутри карточек product-sale */
+/* стили для блока с текстом внутри карточек product-sale */
 .product-text {
     background-color: #F8F8F8;
     padding: 0;
@@ -278,14 +277,14 @@ header {
 
 .product-sale .product-text .product-title a {
     color: #222;
+    font-weight: bolder;
 }
 
 .product-title {
     text-decoration: none;
-    font-family: Lato;
-    color: #000;
-    ;
+    font-family: Lato, sans-serif;
     font-size: 13px;
+    font-weight: bolder;
     font-weight: 400;
     text-align: left;
     margin-top: 24px;
@@ -312,7 +311,6 @@ header {
     margin-left: 18px;
 }
 
-/* Стили для кнопки "Browse All Product" */
 .browse-button {
     text-align: center;
     margin-top: 48px;
@@ -339,5 +337,76 @@ header {
 
 .button-link:hover {
     background-color: #FF5068;
-    /* Цвет при наведении */
+}
+
+/* Медиа-запрос для планшетной версии (768px - 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    /* Изменения для хедера и баннера */
+    header {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .banner-brand {
+        margin-top: 138px;
+        margin-left: 39px;
+        max-width: 283px;
+        max-height: 78px;
+        border-left: 12px solid #F16D7F;
+        padding-left: 16px;
+        display: flex;
+        align-items: center;
+    }
+
+    .banner-brand .brand-text {
+        font-size: 44px;
+    }
+
+    .banner-brand .luxurious-text {
+        font-size: 24px;
+    }
+
+    .banner-brand .fashion-text {
+        font-size: 24px;
+    }
+
+    .product-section {
+        grid-gap: 20px;
+        max-width: 735px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .product-card {
+        max-width: 230px;
+        max-height: 160px;
+    }
+
+    .product-large {
+        max-width: 735px;
+        max-height: 116px;
+    }
+
+    /* Стили для секции Featured Items */
+    .featured-items {
+        width: auto;
+        margin: 110px auto;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* Изменения для контейнера карточек */
+    .card-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    /* Стили для карточек товаров */
+    .product-sale {
+        flex: 0 0 calc(50% - 15px);
+
+    }
+
 }
