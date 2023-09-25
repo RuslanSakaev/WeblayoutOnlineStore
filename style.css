@@ -128,20 +128,20 @@ header {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
     max-width: 1140px;
-    margin: 65px auto 0;
+    margin: 65px auto;
 }
 
 .product-card {
     position: relative;
     overflow: hidden;
-    width: 360px;
+    max-width: 360px;
     max-height: 260px;
     transition: transform 0.3s;
 }
 
 .product-large {
     grid-column: span 3;
-    width: 1140px;
+    max-width: 1140px;
     height: 180px;
 }
 
@@ -185,7 +185,7 @@ header {
 
 .product-overlay p {
     margin: 0;
-    padding: 10px;
+    min-width: 100%;
     z-index: 3;
     /* Поверх затемнения */
     position: absolute;
@@ -213,7 +213,7 @@ header {
 
 /* Стили для секции Featured Items */
 .featured-items {
-    width: 1140px;
+    max-width: 1140px;
     margin: 96px auto;
 }
 
@@ -248,7 +248,7 @@ header {
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     gap: 30px;
 }
 
@@ -395,7 +395,7 @@ header {
     /* Стили для секции Featured Items */
     .featured-items {
         width: auto;
-        margin: 110px auto;
+
         padding-left: 16px;
         padding-right: 16px;
     }
@@ -460,13 +460,17 @@ header {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        margin-left: 16px;
-        margin-right: 16px;
+        max-width: 343px;
+
     }
 
     .product-card {
         width: 100%;
         max-height: 247px;
+    }
+
+    .product-image {
+        height: 100%;
     }
 
     .product-image img {
@@ -476,15 +480,13 @@ header {
 
     .product-large {
         width: 100%;
-        height: auto;
+        height: 110px;
     }
 
     /* Стили для секции Featured Items на мобильных устройствах */
     .featured-items {
         max-width: calc(100% - 16px);
-        margin: 64px 0;
-        padding-left: 8px;
-        padding-right: 8px;
+        margin: 0 auto;
     }
 
     .featured-title {
@@ -498,8 +500,18 @@ header {
         text-align: center;
     }
 
+    /* Стили для контейнера карточек */
     .card-container {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
         gap: 20px;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .product-sale {
+        width: 100%;
     }
 
     .image-container img {
@@ -509,5 +521,6 @@ header {
 
     .browse-button {
         margin-top: 40px;
+        padding-bottom: 84px;
     }
 }
