@@ -343,6 +343,18 @@ header {
     background-color: #FF5068;
 }
 
+footer {
+    background-color: #222224;
+    height: 341px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
 /* Медиа-запрос для планшетной версии (768px - 1024px) */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 
