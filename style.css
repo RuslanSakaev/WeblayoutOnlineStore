@@ -343,17 +343,121 @@ header {
     background-color: #FF5068;
 }
 
-footer {
-    background-color: #222224;
-    height: 341px;
+/* Размещаем блоки footer-block по горизонтали */
+.delivery-promotions-subscription {
+    background: #222224;
 }
 
-.footer {
-    display: flex;
-    justify-content: space-between;
+.dps {
     max-width: 1140px;
+    display: flex;
     margin: 0 auto;
+    align-items: flex-end;
+    padding: 104px 0 104px 0;
 }
+
+.footer-block {
+    text-align: center;
+    flex: 1;
+    color: #FBFBFB;
+}
+
+/* Стили для текста внутри блока footer-block */
+.title {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+.description {
+    font-size: 14px;
+    margin-bottom: 18px;
+    font-weight: 300;
+}
+
+.sea {
+    position: relative;
+    text-align: center;
+}
+
+.background-image {
+    background-image: url('img/back-fot.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -1px;
+    z-index: -1;
+}
+
+.overlay-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Стили для контейнера с текстом и маленькой картинкой */
+.footer-section-white {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    flex-wrap: nowrap;
+}
+
+.text p {
+    margin: 0;
+}
+
+.image img {
+    width: 96px;
+    height: 96px;
+    margin-top: 20px;
+}
+
+.footer-section-bottom {
+    flex: auto;
+}
+
+/* Стили для .footer-section-bottom */
+.footer-section-bottom {
+    background: #222224;
+    color: #FBFBFB;
+    max-height: 80px;
+}
+
+.fsb {
+    /* max-width: 1140px; */
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* Стили для .footer-copyright */
+.footer-copyright {}
+
+/* Стили для .footer-social-icons */
+.footer-social-icons {
+    display: flex;
+    align-items: center;
+}
+
+/* Стили для .social-icon (иконок) */
+.social-icon {
+    margin-right: 8px;
+}
+
 
 /* Медиа-запрос для планшетной версии (768px - 1024px) */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
