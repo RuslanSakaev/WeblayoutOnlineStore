@@ -516,7 +516,7 @@ header {
     line-height: normal;
     background: #222224;
     color: #FBFBFB;
-    max-height: 80px;
+    /* max-height: 80px; */
 }
 
 .fsb {
@@ -527,6 +527,7 @@ header {
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
+    flex-direction: row;
 }
 
 .footer-social-icons {
@@ -796,6 +797,10 @@ header {
         margin: 0;
     }
 
+    .footer-subscribe {
+        margin-bottom: 109px;
+    }
+
     .footer-image {
         margin-top: 64px;
         font-size: 18px;
@@ -803,5 +808,34 @@ header {
 
     .for {
         font-size: 14px;
+    }
+
+    .subscribe-form {
+        max-width: 300px;
+        min-height: 46px
+    }
+
+    .fsb {
+        flex-direction: column;
+    }
+
+    .footer-section-bottom {
+        flex-direction: column;
+        max-height: auto;
+    }
+
+    .footer-copyright {
+
+        height: 100%;
+    }
+
+    .footer-copyright {
+        order: 2;
+    }
+
+    .footer-social-icons {
+        order: 1;
+        margin-bottom: 40px;
+        margin-top: 40px;
     }
 }
