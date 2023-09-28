@@ -52,6 +52,34 @@ header {
     margin-bottom: 20px;
 }
 
+.cart {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-link {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -20px;
+    /* Регулируйте вертикальное положение цифры */
+    right: -10px;
+    /* Регулируйте горизонтальное положение цифры */
+    background-color: #F16D7F;
+    color: #FFF;
+    font-family: Lato, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+
 /* Стили для баннера */
 .banner {
     background-color: #F1E4E6;
@@ -352,8 +380,9 @@ header {
     max-width: 1140px;
     display: flex;
     margin: 0 auto;
-    align-items: flex-end;
+    align-items: center;
     padding: 104px 0 104px 0;
+    flex-direction: row;
 }
 
 .footer-block {
@@ -378,17 +407,18 @@ header {
 
 .sea {
     display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
     text-align: center;
     max-height: 450px;
     overflow: hidden;
-
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .background-image {
-    background-image: url('img/back-fot.svg');
+    background-image: url(img/back-fot.png);
     background-repeat: no-repeat;
     width: 1600px;
     height: 100%;
@@ -438,6 +468,7 @@ header {
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
+    margin-top: 53px;
 }
 
 .for {
@@ -483,44 +514,47 @@ header {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
-
-/* Стили для .footer-section-bottom */
-.footer-section-bottom {
     background: #222224;
     color: #FBFBFB;
     max-height: 80px;
 }
 
 .fsb {
-    /* max-width: 1140px; */
+    max-width: 1140px;
     display: flex;
-    justify-content: space-around;
     padding: 23px;
     flex-wrap: nowrap;
     align-items: center;
-    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
 }
 
-/* Стили для .footer-copyright */
-.footer-copyright {}
-
-/* Стили для .footer-social-icons */
 .footer-social-icons {
     display: flex;
     align-items: center;
 }
 
-/* Стили для .social-icon (иконок) */
 .social-icon {
     margin-right: 8px;
 }
 
+.social-icon:hover {
+    background-color: #F16D7F;
+}
+
+.social-icon img {
+    vertical-align: middle;
+}
+
+.social-icon:hover img {
+    opacity: 0.5;
+    filter: brightness(0) invert(1);
+
+}
 
 /* Медиа-запрос для планшетной версии (768px - 1024px) */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 
-    /* Изменения для хедера и баннера */
     header {
         padding-left: 32px;
         padding-right: 32px;
@@ -580,6 +614,49 @@ header {
         flex-wrap: wrap;
         gap: 16px;
         justify-content: center;
+    }
+
+    .delivery-promotions-subscription {
+        min-height: 610px;
+
+    }
+
+    .dps {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .description {
+        margin: 0;
+    }
+
+    .footer-block img {
+        margin-top: 48px;
+    }
+
+    .sea {
+        max-height: 100%;
+    }
+
+    .background-image {
+        background-image: url(img/back-fot1.png);
+        width: 100%;
+    }
+
+    .footer-section-white {
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .footer-image {
+        margin-top: 64px;
+    }
+
+    .footer-subscribe {
+        margin-bottom: 219px;
     }
 
 }
@@ -696,5 +773,35 @@ header {
     .browse-button {
         margin-top: 40px;
         padding-bottom: 84px;
+    }
+
+    .dps {
+        flex-direction: column;
+        padding-bottom: 64px;
+    }
+
+    .sea {
+        max-height: 100%;
+    }
+
+    .background-image {
+        background-image: url(img/back-fot1.png);
+        width: 100%;
+    }
+
+    .footer-section-white {
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .footer-image {
+        margin-top: 64px;
+        font-size: 18px;
+    }
+
+    .for {
+        font-size: 14px;
     }
 }
